@@ -62,7 +62,7 @@ class CompTrain:
                 self.found_WOD = True
                 self.check_date_change(date['today'])
             else:
-                print(f"Tomorrow WOD ({date['tomorrow']}) has not been posted yet.")
+                print(f"{pendulum.time.now(False)}: Tomorrow's WOD ({date['tomorrow']}) has not been posted yet.")
                 time.sleep(5)
 
 
