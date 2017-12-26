@@ -50,6 +50,7 @@ class CompTrain:
 
     def wod_is_posted(self, url):
         while not self.found_WOD:
+            self.scrape_programming(url)
             date = self.get_current_dates()
 
             if date['tomorrow'] in self.parsed_list:
@@ -68,5 +69,5 @@ class CompTrain:
 
 if __name__ == "__main__":
     test = CompTrain()
-    test.scrape_programming(test.class_url)
+
     test.wod_is_posted(test.class_url)
